@@ -1,0 +1,34 @@
+<!--header-->
+  <header data-am-widget="header" class="am-header am-header-one am-header-fixed">
+    <div class="am-header-left am-header-nav">
+      <a href="#left-link" class="">
+        <button class="am-btn am-btn-default" data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}"><i class="am-header-icon am-icon-bars"></i></button>
+      </a>
+    </div>
+    <h1 class="am-header-title">
+      <a href="#title-link" class=""></a>
+    </h1>
+    <div class="am-header-right am-header-nav">
+      <a href="#right-link" class="">
+        <button class="am-btn am-btn-default" onclick="myFunction()"> <i class="am-header-icon am-icon-th-large"></i></button>
+
+        <script>
+          cnt = 1;
+
+          function myFunction(){
+            if(cnt==1){
+            $('#do-not-say-7').collapse('open');
+            $('#do-not-say-8').collapse('open');
+            $('#do-not-say-9').collapse('open');
+              cnt = 2;
+            }else{
+              cnt = 1;
+            $('#do-not-say-7').collapse('close');
+            $('#do-not-say-8').collapse('close');
+            $('#do-not-say-9').collapse('close');
+            }
+          }
+        </script>
+      </a>
+    </div>
+  </header>
