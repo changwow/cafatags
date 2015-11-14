@@ -1,7 +1,7 @@
 {% load static %}
 <div class="am-panel am-panel-default">
   <div class="am-panel-hd">
-    <div class="am-g" data-am-collapse="{parent: '#accordion', target: '#do-not-say-8'}">     
+    <div class="am-g" data-am-collapse="{parent: '#accordion', target: '#box{{jsName}}'}">     
       <span style="float:left"> 
         <img src="{% static 'assets/img/p3.jpg' %}" width="22" height="62"> 
       </span> 
@@ -9,14 +9,14 @@
         <img class="am-circle" src="{% static 'assets/img/3.jpg' %}" width="44" height="44"> 
       </div>
       <div style="float:left;margin-left:6.5px;margin-top:6px;" class="am-panel-title" >
-            <div style="font-size:16px;font-family:'微软雅黑';font-weight:normal;">测试测试测试测试测试测试测试</div>
-            <div style="font-size:12px;font-family:'微软雅黑';font-weight:normal;margin-top:8px;">sss</div>
+            <div style="font-size:16px;font-family:'微软雅黑';font-weight:normal;">{{title}}</div>
+            <div style="font-size:12px;font-family:'微软雅黑';font-weight:normal;margin-top:8px;">{{subTitle}}</div>
       </div>
     </div>
   </div>
-  <div id="do-not-say-8" class="am-panel-collapse am-collapse">
+  <div id="box{{jsName}}" class="am-panel-collapse am-collapse">
     <div class="am-panel-bd">
-      联合清华央美等八所院校
+      {{content}}
     </div>
   </div>
 </div>

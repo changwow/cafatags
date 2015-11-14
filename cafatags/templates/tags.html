@@ -1,11 +1,6 @@
   <p></p>
   <div class="am-panel-group" id="accordion">
-      {% include 'box.html' %}
-      {% include 'box.html' %}
-      {% include 'box.html' %}
-      {% include 'box.html' %}
-      {% include 'box.html' %}
-      {% include 'box.html' %}
-      {% include 'box.html' %}
-      {% include 'box.html' %}
+      {% for box in boxList %}
+        {% include 'box.html' with title=box.title subTitle=box.subTitle content=box.txt jsName=forloop.counter %}
+      {% endfor%}
   </div>

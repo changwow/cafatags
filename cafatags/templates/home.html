@@ -3,8 +3,8 @@
 {% block title %} Cafatags {% endblock %}
 
 {% block content %}
-  {% include 'nav.html' %}
-  {% include 'tags.html' %}
+  {% include 'nav.html' with boxList=tagsList %}
+  {% include 'tags.html' with boxList=tagsList %}
   {% include 'side.html' %}
   {% include 'pagination.html' %}
   {% include 'footer.html' %}

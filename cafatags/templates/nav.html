@@ -17,15 +17,15 @@
 
           function myFunction(){
             if(cnt==1){
-            $('#do-not-say-7').collapse('open');
-            $('#do-not-say-8').collapse('open');
-            $('#do-not-say-9').collapse('open');
+              {% for box in boxList %}
+                $('#box{{forloop.counter}}').collapse('open');
+              {% endfor%}
               cnt = 2;
             }else{
+              {% for box in boxList %}
+                $('#box{{forloop.counter}}').collapse('close');
+              {% endfor%}
               cnt = 1;
-            $('#do-not-say-7').collapse('close');
-            $('#do-not-say-8').collapse('close');
-            $('#do-not-say-9').collapse('close');
             }
           }
         </script>
